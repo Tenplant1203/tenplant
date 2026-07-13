@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+
+import profileImage from "../assets/profile.jpg";
+---
+
+<section aria-labelledby="profile-heading">
+  <Image
+    src={profileImage}
+    alt="Tenplantのプロフィール画像"
+    class="size-40 rounded-full"
+  />
+  <h1 id="profile-heading">Tenplant</h1>
+  <p class="font-bold">I love Web Engineering.</p>
+</section>
