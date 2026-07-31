@@ -32,12 +32,45 @@ const dogImages = [
   <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
     {
       dogImages.map(({ src, alt }) => (
-        <Image
-          src={src}
-          alt={alt}
-          class="aspect-square rounded-xl object-cover transition-transform duration-300 ease-out hover:z-10 hover:scale-110 hover:shadow-xl motion-reduce:transition-none"
-        />
+        <button
+          type="button"
+          data-dog-image
+          data-full-src={src.src}
+          data-alt={alt}
+          class="rounded-xl text-left transition-transform duration-300 ease-out hover:z-10 hover:scale-110 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:outline-none motion-reduce:transition-none"
+        >
+          <Image
+            src={src}
+            alt={alt}
+            class="aspect-square rounded-xl object-cover"
+          />
+        </button>
       ))
     }
   </div>
+
+  <dialog
+    id="dog-lightbox"
+    class="max-h-[90vh] max-w-[90vw] rounded-2xl bg-transparent p-0 backdrop:bg-black/70"
+  >
+    <div class="relative">
+      <form method="dialog" class="absolute top-3 right-3 z-10">
+        <button
+          type="submit"
+          aria-label="画像を閉じる"
+          class="rounded-full bg-black/70 px-3 py-1 text-xl text-white hover:bg-black/90 focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
+        >
+          ×
+        </button>
+      </form>
+      <img
+        id="dog-lightbox-image"
+        src=""
+        alt=""
+        class="max-h-[90vh] max-w-[90vw] object-contain"
+      />
+    </div>
+  </dialog>
 </section>
+
+<script src="../scripts/dog-lightbox.ts"></script>
