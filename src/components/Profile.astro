@@ -19,17 +19,17 @@ const dogImages = [
 ];
 ---
 
-<section aria-labelledby="profile-heading">
+<section aria-labelledby="profile-heading" class="text-center">
   <Image
     src={profileImage}
     alt="Tenplantのプロフィール画像"
-    class="size-40 rounded-full"
+    class="mx-auto size-40 rounded-full"
   />
   <h1 id="profile-heading">Tenplant</h1>
   <p class="font-bold">学生</p>
   <p>Web</p>
 
-  <div class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+  <div class="mx-auto mt-8 grid max-w-3xl grid-cols-2 gap-4 sm:grid-cols-3">
     {
       dogImages.map(({ src, alt }) => (
         <button
@@ -37,12 +37,12 @@ const dogImages = [
           data-dog-image
           data-full-src={src.src}
           data-alt={alt}
-          class="rounded-xl text-left transition-transform duration-300 ease-out hover:z-10 hover:scale-110 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:outline-none motion-reduce:transition-none"
+          class="rounded-xl bg-zinc-100 text-left transition-transform duration-300 ease-out hover:z-10 hover:scale-110 hover:shadow-xl focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:outline-none motion-reduce:transition-none dark:bg-zinc-900"
         >
           <Image
             src={src}
             alt={alt}
-            class="aspect-square rounded-xl object-cover"
+            class="aspect-square rounded-xl object-cover opacity-0 transition-opacity duration-500 motion-reduce:transition-none"
           />
         </button>
       ))
