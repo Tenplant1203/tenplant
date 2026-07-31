@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import dogImage0934 from "../assets/IMG_0934.webp";
 import dogImage2395 from "../assets/IMG_2395.webp";
 import dogImage4097 from "../assets/IMG_4097.webp";
+import dogImage7450 from "../assets/IMG_7450.webp";
 import dogImage8351 from "../assets/IMG_8351.webp";
 import dogImage8671 from "../assets/IMG_8671.webp";
 import profileImage from "../assets/profile.webp";
@@ -12,6 +13,7 @@ const dogImages = [
   { src: dogImage0934, alt: "犬の写真" },
   { src: dogImage2395, alt: "犬の写真" },
   { src: dogImage4097, alt: "犬の写真" },
+  { src: dogImage7450, alt: "犬の写真" },
   { src: dogImage8351, alt: "犬の写真" },
   { src: dogImage8671, alt: "犬の写真" },
 ];
@@ -33,7 +35,7 @@ const dogImages = [
         <Image
           src={src}
           alt={alt}
-          class="aspect-square rounded-xl object-cover"
+          class="aspect-square rounded-xl object-cover transition-transform duration-300 ease-out hover:z-10 hover:scale-110 hover:shadow-xl motion-reduce:transition-none"
         />
       ))
     }
