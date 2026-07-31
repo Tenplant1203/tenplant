@@ -19,7 +19,9 @@ const posts = (await getCollection("blog")).sort(
           <li>
             <a href={`/blogs/${post.id}/`} class="group block">
               <time
-                datetime={post.data.publishedAt.toISOString().slice(0, 10)}
+                datetime={post.data.publishedAt.toLocaleDateString("en-CA", {
+                  timeZone: "Asia/Tokyo",
+                })}
                 class="text-sm text-zinc-500"
               >
                 {post.data.publishedAt.toLocaleDateString("ja-JP", {

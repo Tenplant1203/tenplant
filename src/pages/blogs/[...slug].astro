@@ -21,7 +21,9 @@ const { Content } = await render(post);
 >
   <article>
     <time
-      datetime={post.data.publishedAt.toISOString().slice(0, 10)}
+      datetime={post.data.publishedAt.toLocaleDateString("en-CA", {
+        timeZone: "Asia/Tokyo",
+      })}
       class="text-sm text-zinc-500"
     >
       {
