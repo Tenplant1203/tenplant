@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@tailwindcss/typography": "^0.5.20",
     "@typescript-eslint/parser": "^8.62.0",
     "eslint": "^10.5.0",
     "eslint-plugin-astro": "^2.1.1",
