@@ -20,13 +20,18 @@ const { Content } = await render(post);
   description={post.data.description}
 >
   <article>
-    <p class="text-sm text-zinc-500">
+    <time
+      datetime={post.data.publishedAt.toLocaleDateString("en-CA", {
+        timeZone: "Asia/Tokyo",
+      })}
+      class="text-sm text-zinc-500"
+    >
       {
         post.data.publishedAt.toLocaleDateString("ja-JP", {
           timeZone: "Asia/Tokyo",
         })
       }
-    </p>
+    </time>
     <h1 class="mt-2 text-3xl font-bold">{post.data.title}</h1>
     <div class="prose prose-zinc mt-8 max-w-none">
       <Content />
