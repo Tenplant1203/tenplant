@@ -1,0 +1,23 @@
+---
+import dogImage from "../assets/IMG_4097.webp";
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout title="404 | Tenplant" description="ページが見つかりません。">
+  <section class="flex min-h-[50vh] flex-col items-center justify-center">
+    <p class="text-8xl font-bold tracking-tight">404</p>
+    <Image
+      src={dogImage}
+      alt="犬の写真"
+      loading="eager"
+      class="mt-8 max-w-sm rounded-xl"
+    />
+    <a
+      href="/"
+      class="mt-8 rounded-lg px-3 py-2 underline-offset-4 hover:underline focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:outline-none"
+    >
+      home
+    </a>
+  </section>
+</Layout>
