@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 
+import profileIcon from "../assets/profile.webp";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 
@@ -20,6 +21,7 @@ const canonicalUrl = Astro.url.href;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="icon" type="image/webp" href={profileIcon.src} />
     <link rel="canonical" href={canonicalUrl} />
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:type" content="website" />
